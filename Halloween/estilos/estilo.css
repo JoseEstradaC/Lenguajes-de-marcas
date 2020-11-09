@@ -1,0 +1,74 @@
+@font-face {
+	font-family: 'lycanthrope';
+	src: url('../fuentes/Lycanthrope.ttf');
+}
+
+body {
+	background-color: black;
+}
+
+#container {
+	width: 1200px;
+	height: 706px;
+	background-image: url('../imagenes/fondo.jpg');
+	margin: auto;
+	top: 40px;
+	position: relative;
+}
+
+#titulo {
+	position: absolute;
+	top: 30px;
+	left: 150px;
+	font-family: 'lycanthrope';
+	font-size: 2em;
+	text-shadow: 1px 1px 1px #a43100;
+}
+
+#invitacion {
+	visibility: hidden;
+	position: absolute;
+	top: -32px;
+	left: 900px;
+	padding: 6px;
+	background-color: #3f2042;
+
+	font-family: 'lycanthrope';
+	font-size: 2em;
+	text-shadow: 1px 1px 1px #a43100;
+}
+
+#bruja {
+	position: absolute;
+	top: 250px;
+	left: 0px;
+	cursor: help;
+	animation-name: moverBrujaDerecha;
+	animation-duration: 20s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+#caldero {
+	position: absolute;
+	width: 250px;
+	top: 450px;
+	left: 425px;
+	visibility: visible;
+	cursor: pointer;
+}
+
+@keyframes moverBrujaDerecha {
+	from {
+		top: 250px;
+		left: 0px;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	to {
+		top: 50px;
+		left: 900px;
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+	}
+}

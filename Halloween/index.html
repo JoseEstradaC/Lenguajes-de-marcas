@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Terrorífica fiesta de Halloween</title>
+     <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="estilos/estilo.css">
+     <script src="javascripts/funciones.js"></script>
+</head>
+
+<body onload="sonar('fondo'); var brujaPulsada = false">
+     <div id="container">
+          <audio id="grito" controls>
+               <source src="sonidos/grito.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="bruja">
+               <source src="sonidos/risaBruja.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="fondo"">
+               <source src=" sonidos/fondo.mp3" type="audio/mpeg">
+          </audio>
+
+          <p id="titulo">Terrorifica fiesta <br />de Halloween,<br /> preguntale a la bruja</p>
+
+          <p id="invitacion">Quedas invitado a la fiesta de Halloween,<br /> para saber donde es pulsa el caldero</p>
+          <img id="bruja" src="imagenes/bruja.gif" onclick="mostrar('invitacion'); brujaPulsada = true; sonar('bruja')"
+               onmouseover="sonar('bruja')">
+
+          <img id="caldero" src="imagenes/caldero.gif" onclick=" if(brujaPulsada) {sonar('grito')}"
+               onmouseout="parar('grito')">
+     </div>
+</body>
+
+</html>
